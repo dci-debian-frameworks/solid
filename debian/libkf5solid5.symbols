@@ -1,4 +1,4 @@
-# SymbolsHelper-Confirmed: 5.0.0 amd64
+# SymbolsHelper-Confirmed: 5.6.0+git20150114.0006+15.04 amd64 i386
 libKF5Solid.so.5 libkf5solid5 #MINVER#
  PredicateParse_initLexer@Base 4.97.0
  PredicateParse_mainParse@Base 4.97.0
@@ -177,6 +177,7 @@ libKF5Solid.so.5 libkf5solid5 #MINVER#
  _ZN5Solid7Battery14voltageChangedEdRK7QString@Base 5.0.0
  _ZN5Solid7Battery15capacityChangedEiRK7QString@Base 4.97.0
  _ZN5Solid7Battery16staticMetaObjectE@Base 4.97.0
+ _ZN5Solid7Battery17energyFullChangedEdRK7QString@Base 5.6.0+git20150114.0006+15.04
  _ZN5Solid7Battery17energyRateChangedEdRK7QString@Base 4.97.0
  _ZN5Solid7Battery17timeToFullChangedExRK7QString@Base 5.0.0
  _ZN5Solid7Battery18chargeStateChangedEiRK7QString@Base 4.97.0
@@ -184,6 +185,7 @@ libKF5Solid.so.5 libkf5solid5 #MINVER#
  _ZN5Solid7Battery18timeToEmptyChangedExRK7QString@Base 5.0.0
  _ZN5Solid7Battery19presentStateChangedEbRK7QString@Base 5.0.0
  _ZN5Solid7Battery20chargePercentChangedEiRK7QString@Base 4.97.0
+ _ZN5Solid7Battery23energyFullDesignChangedEdRK7QString@Base 5.6.0+git20150114.0006+15.04
  _ZN5Solid7Battery23powerSupplyStateChangedEbRK7QString@Base 4.97.0
  _ZN5Solid7BatteryC1EP7QObject@Base 4.97.0
  _ZN5Solid7BatteryC2EP7QObject@Base 4.97.0
@@ -282,6 +284,7 @@ libKF5Solid.so.5 libkf5solid5 #MINVER#
  _ZNK5Solid6Device7isValidEv@Base 4.97.0
  _ZNK5Solid6Device7productEv@Base 4.97.0
  _ZNK5Solid6Device9parentUdiEv@Base 4.97.0
+ _ZNK5Solid7Battery10energyFullEv@Base 5.6.0+git20150114.0006+15.04
  _ZNK5Solid7Battery10energyRateEv@Base 4.97.0
  _ZNK5Solid7Battery10isRecalledEv@Base 5.0.0
  _ZNK5Solid7Battery10metaObjectEv@Base 4.97.0
@@ -294,6 +297,7 @@ libKF5Solid.so.5 libkf5solid5 #MINVER#
  _ZNK5Solid7Battery13chargePercentEv@Base 4.97.0
  _ZNK5Solid7Battery13isPowerSupplyEv@Base 4.97.0
  _ZNK5Solid7Battery14isRechargeableEv@Base 4.97.0
+ _ZNK5Solid7Battery16energyFullDesignEv@Base 5.6.0+git20150114.0006+15.04
  _ZNK5Solid7Battery4typeEv@Base 4.97.0
  _ZNK5Solid7Battery6energyEv@Base 4.97.0
  _ZNK5Solid7Battery6serialEv@Base 5.0.0
