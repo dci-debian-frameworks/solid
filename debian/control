@@ -23,7 +23,9 @@ Vcs-Git: git://anonscm.debian.org/pkg-kde/frameworks/solid.git
 Package: libkf5solid-dev
 Section: libdevel
 Architecture: any
-Depends: libkf5solid5 (= ${binary:Version}), qtbase5-dev, ${misc:Depends}
+Depends: libkf5solid5 (= ${binary:Version}),
+         qtbase5-dev (>= 5.2.0),
+         ${misc:Depends}
 Description: Qt library to query and control hardware
  Solid is a device integration framework. It provides a way of querying and
  interacting with hardware independently of the underlying operating system.
