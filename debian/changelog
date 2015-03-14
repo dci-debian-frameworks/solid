@@ -1,9 +1,9 @@
-solid (5.8.0-1~) UNRELEASED; urgency=medium
+solid (5.8.0-1) experimental; urgency=medium
 
   * New upstream release (5.8.0).
   * Update symbols files.
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 14 Mar 2015 10:27:11 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 14 Mar 2015 22:27:07 +0100
 
 solid (5.7.0-1) experimental; urgency=medium
 
