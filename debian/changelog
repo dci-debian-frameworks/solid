@@ -4,12 +4,24 @@ solid (5.9.0-1~) UNRELEASED; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 16 Apr 2015 10:25:05 +0200
 
+solid (5.9.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 13 Apr 2015 23:20:12 +0200
+
 solid (5.8.0-1) experimental; urgency=medium
 
   * New upstream release (5.8.0).
   * Update symbols files.
 
  -- Maximiliano Curia <maxy@debian.org>  Sat, 14 Mar 2015 22:27:07 +0100
+
+solid (5.8.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 17 Mar 2015 15:46:36 +0100
 
 solid (5.7.0-1) experimental; urgency=medium
 
