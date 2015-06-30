@@ -1,7 +1,12 @@
-solid (5.10.0-0ubuntu1) wily; urgency=medium
+solid (5.11.0-1) unstable; urgency=medium
 
   [ Maximiliano Curia ]
   * New upstream release (5.10.0).
+  * New upstream release (5.11.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 26 Jun 2015 17:04:16 +0200
+
+solid (5.10.0-0ubuntu1) wily; urgency=medium
 
   [ Jonathan Riddell ]
   * New upstream release
@@ -96,9 +101,9 @@ solid (5.2.0-0ubuntu1) utopic; urgency=medium
   * Use pkg-kde-tools version 3 scripts
 
   [ Scarlett Clark ]
-  * Fix qml-module-org-kde-solid.install to reflect new paths. 
-  * Move copyright extra details to comment to silence 
-    space-in-std-shortname-in-dep5-copyright lintian error. 
+  * Fix qml-module-org-kde-solid.install to reflect new paths.
+  * Move copyright extra details to comment to silence
+    space-in-std-shortname-in-dep5-copyright lintian error.
   * Revert to original install paths. Upstream Review:120229
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 22 Sep 2014 19:35:42 +0200
