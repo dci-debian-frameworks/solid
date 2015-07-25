@@ -7,6 +7,9 @@ solid (5.12.0-0ubuntu1) UNRELEASED; urgency=medium
   * Update symbols file: mark as optional the symbols gone after
     building with GCC 5
 
+  [ Scarlett Clark ]
+  * vivid backport 
+
  -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 10 Jul 2015 08:32:01 -0700
 
 solid (5.11.0-1) unstable; urgency=medium
