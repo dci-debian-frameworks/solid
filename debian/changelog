@@ -1,8 +1,8 @@
-solid (5.14.0-0ubuntu1) UNRELEASED; urgency=medium
+solid (5.14.0-0ubuntu1) wily; urgency=medium
 
   * new upstream release
 
- -- Clive Johnston <clivejo@aol.com>  Mon, 14 Sep 2015 20:08:50 +0100
+ -- Clive Johnston <clivejo@aol.com>  Thu, 17 Sep 2015 13:29:41 +0100
 
 solid (5.13.0-0ubuntu1) wily; urgency=medium
 
