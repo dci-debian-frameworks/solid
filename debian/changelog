@@ -1,8 +1,8 @@
-solid (5.14.0-2~) UNRELEASED; urgency=medium
+solid (5.14.0-2) unstable; urgency=medium
 
   * Move auto test to autopkgtests.
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 18 Sep 2015 13:23:14 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 18 Sep 2015 14:12:59 +0200
 
 solid (5.14.0-1) unstable; urgency=medium
 
