@@ -1,6 +1,7 @@
 solid (5.15.0-1~) UNRELEASED; urgency=medium
 
   * New upstream release (5.15.0).
+  * Update symbols files from buildds logs (5.14.0-2).
 
  -- Maximiliano Curia <maxy@debian.org>  Mon, 05 Oct 2015 15:05:17 +0200
 
