@@ -1,3 +1,22 @@
+solid (5.16.0-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Debian merge. No remaining changes. 
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 02 Dec 2015 13:44:44 -0800
+
+solid (5.16.0-1) unstable; urgency=medium
+
+  * New upstream release (5.16.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 30 Nov 2015 12:12:58 +0100
+
+solid (5.15.0-1) unstable; urgency=medium
+
+  * New upstream release (5.15.0).
+  * Update symbols files from buildds logs (5.14.0-2).
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 09 Oct 2015 19:16:09 +0200
+
 solid (5.15.0-0ubuntu2) xenial; urgency=medium
 
   * Fix autopackagetests by adding allow-stderr to the requirements.
@@ -14,17 +33,44 @@ solid (5.15.0-0ubuntu1) wily; urgency=medium
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 07 Oct 2015 14:00:21 +0100
 
+solid (5.14.0-2) unstable; urgency=medium
+
+  * Move auto test to autopkgtests.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 18 Sep 2015 14:12:59 +0200
+
+solid (5.14.0-1) unstable; urgency=medium
+
+  * New upstream release (5.14.0).
+  * Removed private classes from exported symbols.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 15 Sep 2015 13:48:35 +0200
+
 solid (5.14.0-0ubuntu1) wily; urgency=medium
 
   * new upstream release
 
  -- Clive Johnston <clivejo@aol.com>  Thu, 17 Sep 2015 13:29:41 +0100
 
+solid (5.13.0-1) unstable; urgency=medium
+
+  * New upstream release (5.13.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 27 Aug 2015 18:35:57 +0200
+
 solid (5.13.0-0ubuntu1) wily; urgency=medium
 
   * new upstream release
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 10 Aug 2015 13:36:52 +0200
+
+solid (5.12.0-1) unstable; urgency=medium
+
+  * New upstream release (5.12.0).
+  * Update symbols files for gcc5 compatibility. (Closes: #791738)
+    Thanks to Martin Michlmayr
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 09 Jul 2015 12:43:16 +0200
 
 solid (5.12.0-0ubuntu1) wily; urgency=medium
 
