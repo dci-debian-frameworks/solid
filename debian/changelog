@@ -1,8 +1,9 @@
-solid (5.16.0-1ubuntu1) UNRELEASED; urgency=medium
+solid (4:5.17.0-0ubuntu1) UNRELEASED; urgency=medium
 
   * Debian merge. No remaining changes. 
+  * New upstream release Xenial
 
- -- Scarlett Clark <sgclark@kubuntu.org>  Wed, 02 Dec 2015 13:44:44 -0800
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 14 Dec 2015 04:16:06 +0000
 
 solid (5.16.0-1) unstable; urgency=medium
 
