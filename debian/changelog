@@ -1,9 +1,9 @@
-solid (5.18.0-1~) UNRELEASED; urgency=medium
+solid (5.18.0-1) experimental; urgency=medium
 
   * New upstream release (5.17.0).
   * New upstream release (5.18.0).
 
- -- Maximiliano Curia <maxy@debian.org>  Tue, 19 Jan 2016 20:57:57 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 27 Jan 2016 13:33:41 +0100
 
 solid (5.16.0-1) unstable; urgency=medium
 
