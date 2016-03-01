@@ -4,7 +4,7 @@
 include /usr/share/pkg-kde-tools/qt-kde-team/3/debian-qt-kde.mk
 
 override_dh_strip:
-	dh_strip --ddeb-migration='libkf5solid5-dbg (<= 5.19.0-1~~)'
+	dh_strip --dbgsym-migration='libkf5solid5-dbg (<= 5.19.0-1~~)'
 
 override_dh_auto_test:
 	# Disable dh_auto_test at build time
