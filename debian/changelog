@@ -1,12 +1,13 @@
-solid (5.20.0-1~1.gbpb14380) UNRELEASED; urgency=medium
+solid (5.20.0-1~2.gbpaf9b9b) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @b1438072b9d0d376883d7773f2a778da600f7b83 **
+  ** SNAPSHOT build @af9b9b1ccb8edddb6009e5efa88ac3c0f2117074 **
 
   * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
   * Add upstream metadata (DEP-12)
   * Drop qt5-qmltooling-plugins build dependency
+  * UNRELEASED
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Wed, 23 Mar 2016 23:08:46 +0100
+ -- Maximiliano Curia <jenkins@amadeus.gnuservers.com.ar>  Mon, 28 Mar 2016 14:46:05 +0200
 
 solid (5.19.0-2) experimental; urgency=medium
 
