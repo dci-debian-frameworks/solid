@@ -1,6 +1,6 @@
-solid (5.20.0-1~5.gbpc60d38) UNRELEASED; urgency=medium
+solid (5.20.0-1~6.gbp6dbfc9) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @c60d3844503de9e2f0e54e1011884ab526b07890 **
+  ** SNAPSHOT build @6dbfc9da562b37d5ae4d4919fefe1fb35c9962c5 **
 
   * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
   * Add upstream metadata (DEP-12)
@@ -9,8 +9,9 @@ solid (5.20.0-1~5.gbpc60d38) UNRELEASED; urgency=medium
   * UNRELEASED
   * UNRELEASED
   * UNRELEASED
+  * UNRELEASED
 
- -- Maximiliano Curia <jenkins@amadeus.gnuservers.com.ar>  Tue, 29 Mar 2016 03:57:05 +0200
+ -- Maximiliano Curia <jenkins@amadeus.gnuservers.com.ar>  Tue, 29 Mar 2016 18:52:41 +0200
 
 solid (5.19.0-2) experimental; urgency=medium
 
