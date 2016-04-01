@@ -1,6 +1,6 @@
-solid (5.20.0-1~7.gbp4fd8be) UNRELEASED; urgency=medium
+solid (5.20.0-1~8.gbpae125e) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @4fd8be797b6c2a3de9ed1f3fed717d80417a411e **
+  ** SNAPSHOT build @ae125e1bf2294521492798058e82bd1b6f9498bd **
 
   * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
   * Add upstream metadata (DEP-12)
@@ -11,8 +11,9 @@ solid (5.20.0-1~7.gbp4fd8be) UNRELEASED; urgency=medium
   * UNRELEASED
   * UNRELEASED
   * UNRELEASED
+  * Update acc test script
 
- -- Maximiliano Curia <jenkins@amadeus.gnuservers.com.ar>  Wed, 30 Mar 2016 10:57:39 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Fri, 01 Apr 2016 17:57:16 +0200
 
 solid (5.19.0-2) experimental; urgency=medium
 
