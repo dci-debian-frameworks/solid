@@ -1,5 +1,8 @@
-solid (5.20.0-1~9.gbpc36898) UNRELEASED; urgency=medium
+solid (5.21.0-1~1.gbp61b0f6) UNRELEASED; urgency=medium
 
+  ** SNAPSHOT build @61b0f643934632495b37fc1f5fe32c4f282cf7ca **
+
+  [ Maximiliano Curia ]
   ** SNAPSHOT build @c3689805bb8e97a2f6af75057ddba71b46c461b9 **
 
   * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
@@ -13,8 +16,14 @@ solid (5.20.0-1~9.gbpc36898) UNRELEASED; urgency=medium
   * UNRELEASED
   * Update acc test script
   * UNRELEASED
+  * uscan no longer supports more than one main upstream tarball being listed
 
- -- Maximiliano Curia <jenkins@amadeus.gnuservers.com.ar>  Fri, 01 Apr 2016 17:57:27 +0200
+  [ Automatic packaging ]
+  * Update build-deps and deps with the info from cmake
+
+  [ Maximiliano Curia ]
+
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sun, 10 Apr 2016 09:57:10 +0200
 
 solid (5.19.0-2) experimental; urgency=medium
 
