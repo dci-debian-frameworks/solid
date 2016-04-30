@@ -1,6 +1,6 @@
-solid (5.21.0-1~1.gbp61b0f6) UNRELEASED; urgency=medium
+solid (5.21.0-1~2.gbp7c284a) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @61b0f643934632495b37fc1f5fe32c4f282cf7ca **
+  ** SNAPSHOT build @7c284a876aec700fd39d867262c273d971348d25 **
 
   [ Maximiliano Curia ]
   ** SNAPSHOT build @c3689805bb8e97a2f6af75057ddba71b46c461b9 **
@@ -20,10 +20,11 @@ solid (5.21.0-1~1.gbp61b0f6) UNRELEASED; urgency=medium
 
   [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
+  * Bump Standards-Version to 3.9.8
 
   [ Maximiliano Curia ]
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sun, 10 Apr 2016 09:57:10 +0200
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Sat, 30 Apr 2016 20:04:46 +0200
 
 solid (5.19.0-2) experimental; urgency=medium
 
