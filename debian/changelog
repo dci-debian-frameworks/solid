@@ -1,30 +1,17 @@
-solid (5.21.0-1~2.gbp7c284a) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @7c284a876aec700fd39d867262c273d971348d25 **
+solid (5.21.0-1) experimental; urgency=medium
 
   [ Maximiliano Curia ]
-  ** SNAPSHOT build @c3689805bb8e97a2f6af75057ddba71b46c461b9 **
-
   * Replace the "Historical name" ddeb-migration by its "Modern, clearer" replacement dbgsym-migration.
   * Add upstream metadata (DEP-12)
   * Drop qt5-qmltooling-plugins build dependency
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
-  * UNRELEASED
   * Update acc test script
-  * UNRELEASED
   * uscan no longer supports more than one main upstream tarball being listed
 
   [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
   * Bump Standards-Version to 3.9.8
 
-  [ Maximiliano Curia ]
-
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Sat, 30 Apr 2016 20:04:46 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 05 May 2016 18:48:46 +0200
 
 solid (5.19.0-2) experimental; urgency=medium
 
