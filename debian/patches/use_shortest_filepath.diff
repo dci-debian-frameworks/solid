@@ -1,0 +1,52 @@
+--- a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
++++ b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
+@@ -75,6 +75,24 @@
+     return m_device->isMounted();
+ }
+ 
++static inline QString get_shortest(ByteArrayList& mntPoints)
++{
++    // We return the shortest filePath to avoid errors like:
++    // https://bugs.debian.org/762950
++
++    if (mntPoints.isEmpty()) {
++        return QString();
++    }
++    QString shortest = QFile::decodeName(mntPoints.first());
++    for (int i = 1; i < mntPoints.count(); i++) {
++        QString current = QFile::decodeName(mntPoints.at(i));
++        if (shortest.length() > current.length()) {
++            shortest = current;
++        }
++    }
++    return shortest;
++}
++
+ QString StorageAccess::filePath() const
+ {
+     ByteArrayList mntPoints;
+@@ -86,20 +104,13 @@
+         }
+         Device holderDevice(path);
+         mntPoints = qdbus_cast<ByteArrayList>(holderDevice.prop("MountPoints"));
+-        if (!mntPoints.isEmpty()) {
+-            return QFile::decodeName(mntPoints.first());    // FIXME Solid doesn't support multiple mount points
+-        } else {
+-            return QString();
+-        }
++        // FIXME Solid doesn't support multiple mount points
++        return get_shortest(mntPoints);
+     }
+ 
+     mntPoints = qdbus_cast<ByteArrayList>(m_device->prop("MountPoints"));
+-
+-    if (!mntPoints.isEmpty()) {
+-        return QFile::decodeName(mntPoints.first());    // FIXME Solid doesn't support multiple mount points
+-    } else {
+-        return QString();
+-    }
++    // FIXME Solid doesn't support multiple mount points
++    return get_shortest(mntPoints);
+ }
+ 
+ bool StorageAccess::isIgnored() const
