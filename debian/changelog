@@ -1,11 +1,10 @@
-solid (5.23.0-1~1.gbp7e6920) UNRELEASED; urgency=medium
+solid (5.23.0-1) unstable; urgency=medium
 
-  ** SNAPSHOT build @7e6920193c471cee37a170d2a422ef3ddadf362f **
-
+  [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
   * Refresh patches
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Sun, 12 Jun 2016 21:57:45 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 18 Jun 2016 08:26:11 +0200
 
 solid (5.22.0-1) unstable; urgency=medium
 
