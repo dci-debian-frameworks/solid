@@ -1,17 +1,12 @@
-solid (5.25.0-1~2.gbp7d4162) UNRELEASED; urgency=medium
-
-  ** SNAPSHOT build @7d4162e88b2ae96f08509be7a3511cb14a109ee4 **
+solid (5.25.0-1) unstable; urgency=medium
 
   [ Automatic packaging ]
-  ** SNAPSHOT build @7bbfb5f393cd135ef68ab13ef010d3e1907863a6 **
-
-  * Update build-deps and deps with the info from cmake
   * Update build-deps and deps with the info from cmake
 
   [ Maximiliano Curia ]
   * Bump group breaks (5.25)
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Wed, 17 Aug 2016 21:57:16 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 18 Aug 2016 17:20:25 +0200
 
 solid (5.23.0-1) unstable; urgency=medium
 
