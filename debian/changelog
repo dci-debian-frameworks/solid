@@ -1,3 +1,11 @@
+solid (5.26.0-1~1.gbpede3a9) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @ede3a975383ddf6d196024846e0aab010ae10d36 **
+
+  * Update build-deps and deps with the info from cmake
+
+ -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Sat, 10 Sep 2016 15:57:55 +0200
+
 solid (5.25.0-1) unstable; urgency=medium
 
   [ Automatic packaging ]
