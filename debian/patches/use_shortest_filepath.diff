@@ -14,7 +14,7 @@ index 1bd6acf..4a3d088 100644
      return m_device->isMounted();
  }
  
-+static inline QString get_shortest(ByteArrayList& mntPoints)
++static inline QString get_shortest(QByteArrayList& mntPoints)
 +{
 +    // We return the shortest filePath to avoid errors like:
 +    // https://bugs.debian.org/762950
