@@ -1,11 +1,14 @@
-solid (5.28.0-1~2.gbpfb0cb9) UNRELEASED; urgency=medium
+solid (5.28.0-1) unstable; urgency=medium
 
-  ** SNAPSHOT build @fb0cb9575adbab7d33d8d1bc05df2c969b02f9a5 **
-
+  [ Automatic packaging ]
   * Update build-deps and deps with the info from cmake
   * Refresh patches
 
- -- Automatic packaging <maxy+jenkins@gnuservers.com.ar>  Tue, 15 Nov 2016 17:40:31 +0100
+  [ Maximiliano Curia ]
+  * New upstream release (5.28)
+  * Bump group breaks (5.28)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 18 Nov 2016 16:03:11 +0100
 
 solid (5.27.0-1) unstable; urgency=medium
 
