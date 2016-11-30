@@ -1,3 +1,10 @@
+solid (5.28.0-2) unstable; urgency=medium
+
+  * Add patch: fix-FTBFS-on-mipsel-and-m68k-src-solid-predicate_parser.c.patch.
+    Thanks to James Cowgill for the patch (thanks a lot!!) (Closes: 846266)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 30 Nov 2016 15:57:09 +0100
+
 solid (5.28.0-1) unstable; urgency=medium
 
   [ Automatic packaging ]
