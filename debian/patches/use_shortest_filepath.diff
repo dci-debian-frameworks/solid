@@ -7,7 +7,7 @@ Subject: use_shortest_filepath
  1 file changed, 22 insertions(+), 11 deletions(-)
 
 diff --git a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
-index 1bd6acf..4a3d088 100644
+index edd7de8..831f09e 100644
 --- a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
 +++ b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
 @@ -75,6 +75,24 @@ bool StorageAccess::isAccessible() const
