@@ -1,4 +1,4 @@
-solid (5.28.0-3~) UNRELEASED; urgency=medium
+solid (5.28.0-3) unstable; urgency=medium
 
   * Pick "Work round DBus property fetching bug" (6f1c6dc)
     Workaround for a qt5 dbus property issue.
@@ -10,7 +10,7 @@ solid (5.28.0-3~) UNRELEASED; urgency=medium
     Add upstream patch as:
      UDisks-2-Device-Add-description-for-Floppy-Disk.patch
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sat, 08 Apr 2017 19:32:08 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 08 Apr 2017 19:58:03 +0200
 
 solid (5.28.0-2) unstable; urgency=medium
 
