@@ -1,5 +1,9 @@
 solid (5.28.0-4) UNRELEASED; urgency=medium
 
+  [ Pino Toscano ]
+  * Backport upstream commit f4a272b2b9c3c16f5f0e3aa1e416080aeb045c36 to fix
+    build on kFreeBSD; patch
+    cmake-build-udisks2-backend-on-FreeBSD-only-when-ena.patch.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 18 Jun 2017 16:22:01 +0200
 
