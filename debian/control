@@ -68,7 +68,7 @@ Description: Qt library to query and control hardware
 Package: libkf5solid-bin
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Recommends: udisks2, upower
+Recommends: udisks2 [linux-any], upower
 Description: Qt library to query and control hardware
  Solid is a device integration framework. It provides a way of querying and
  interacting with hardware independently of the underlying operating system.
