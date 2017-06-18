@@ -1,3 +1,8 @@
+solid (5.28.0-4) UNRELEASED; urgency=medium
+
+
+ -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 18 Jun 2017 16:22:01 +0200
+
 solid (5.28.0-3) unstable; urgency=medium
 
   * Pick "Work round DBus property fetching bug" (6f1c6dc)
