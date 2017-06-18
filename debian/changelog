@@ -1,12 +1,12 @@
-solid (5.28.0-4) UNRELEASED; urgency=medium
+solid (5.28.0-4) unstable; urgency=medium
 
-  [ Pino Toscano ]
+  * Team upload.
   * Backport upstream commit f4a272b2b9c3c16f5f0e3aa1e416080aeb045c36 to fix
     build on kFreeBSD; patch
     cmake-build-udisks2-backend-on-FreeBSD-only-when-ena.patch.
   * libkf5solid-bin: limit the udisks2 recommend to Linux architectures.
 
- -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 18 Jun 2017 16:22:01 +0200
+ -- Pino Toscano <pino@debian.org>  Sun, 18 Jun 2017 16:27:59 +0200
 
 solid (5.28.0-3) unstable; urgency=medium
 
