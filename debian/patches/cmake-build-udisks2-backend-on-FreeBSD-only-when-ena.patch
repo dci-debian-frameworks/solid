@@ -1,0 +1,35 @@
+From f4a272b2b9c3c16f5f0e3aa1e416080aeb045c36 Mon Sep 17 00:00:00 2001
+From: Pino Toscano <toscano.pino@tiscali.it>
+Date: Mon, 5 Jun 2017 08:40:07 +0200
+Subject: [PATCH] cmake: build udisks2 backend on FreeBSD only when enabled
+
+there is no point building sources that are not used otherwise
+---
+ src/solid/devices/CMakeLists.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/solid/devices/CMakeLists.txt b/src/solid/devices/CMakeLists.txt
+index b841b54..cfb4f72 100644
+--- a/src/solid/devices/CMakeLists.txt
++++ b/src/solid/devices/CMakeLists.txt
+@@ -96,6 +96,8 @@ include(devices/backends/fakehw/CMakeLists.txt)
+ if(NOT WIN32 AND NOT APPLE)
+    if (CMAKE_SYSTEM_NAME MATCHES FreeBSD)
+       option(EXPERIMENTAL_BSDISKS "Use UDisks2/bsdisks backend instead of HAL to manage disk devices" OFF)
++   else ()
++      set(EXPERIMENTAL_BSDISKS FALSE)
+    endif()
+ 
+    if ( UDEV_FOUND )
+@@ -107,7 +109,7 @@ if(NOT WIN32 AND NOT APPLE)
+    include(devices/backends/upower/CMakeLists.txt)
+ 
+    # FIXME: this should work on more Unix systems
+-   if ((CMAKE_SYSTEM_NAME MATCHES Linux AND UDEV_FOUND) OR CMAKE_SYSTEM_NAME MATCHES FreeBSD)
++   if ((CMAKE_SYSTEM_NAME MATCHES Linux AND UDEV_FOUND) OR EXPERIMENTAL_BSDISKS)
+         message(STATUS "Building Solid UDisks2 backend." )
+         include(devices/backends/udisks2/CMakeLists.txt)
+    endif ()
+-- 
+2.11.0
+
