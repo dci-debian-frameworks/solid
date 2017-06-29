@@ -1,5 +1,3 @@
 use_shortest_filepath.diff
 fix-FTBFS-on-mipsel-and-m68k-src-solid-predicate_parser.c.patch
-Work-round-DBus-property-fetching-bug.patch
-UDisks-2-Device-Add-description-for-Floppy-Disk.patch
 cmake-build-udisks2-backend-on-FreeBSD-only-when-ena.patch
