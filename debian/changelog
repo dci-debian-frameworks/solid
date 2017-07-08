@@ -1,4 +1,4 @@
-solid (5.35.0-1~1) UNRELEASED; urgency=medium
+solid (5.36.0-1~) UNRELEASED; urgency=medium
 
   [ Maximiliano Curia ]
   * New upstream release (5.35.0).
@@ -6,6 +6,8 @@ solid (5.35.0-1~1) UNRELEASED; urgency=medium
   * Update build-deps and deps with the info from cmake
   * Bump group breaks (5.35)
   * Drop upstream patches
+  * watch: Use https uris
+  * New upstream release (5.36.0).
 
   [ Harald Sitter ]
   * promote media-player-info from suggests to recommends
@@ -15,7 +17,7 @@ solid (5.35.0-1~1) UNRELEASED; urgency=medium
   * Add signing key
   * also include signing-key
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 06 Jul 2017 15:41:18 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 08 Jul 2017 13:41:04 +0200
 
 solid (5.28.0-4) unstable; urgency=medium
 
