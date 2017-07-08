@@ -32,7 +32,7 @@ Description: Qt library to query and control hardware
  This package is part of KDE Frameworks 5.
  .
  This package contains the development files.
-Breaks: kio-dev (<< 5.28), libkf5kio-dev (<< 5.35)
+Breaks: kio-dev (<< 5.28), libkf5kio-dev (<< 5.36)
 
 Package: libkf5solid5
 Architecture: any
@@ -46,12 +46,12 @@ Description: Qt library to query and control hardware
  interacting with hardware independently of the underlying operating system.
  .
  Solid is part of KDE Frameworks 5.
-Breaks: baloo-kf5 (<< 5.35),
-        kio (<< 5.35),
-        libkf5baloo5 (<< 5.35),
-        libkf5kdelibs4support5 (<< 5.35),
-        libkf5kiofilewidgets5 (<< 5.35),
-        libkf5runner5 (<< 5.35)
+Breaks: baloo-kf5 (<< 5.36),
+        kio (<< 5.36),
+        libkf5baloo5 (<< 5.36),
+        libkf5kdelibs4support5 (<< 5.36),
+        libkf5kiofilewidgets5 (<< 5.36),
+        libkf5runner5 (<< 5.36)
 
 Package: libkf5solid5-data
 Architecture: all
