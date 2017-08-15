@@ -61,6 +61,7 @@ Description: Qt library to query and control hardware (documentation)
  Solid is part of KDE Frameworks 5.
  .
  This package contains the qch documentation files.
+Section: doc
 
 Package: libkf5solid5
 Architecture: any
