@@ -6,64 +6,21 @@ Uploaders: Maximiliano Curia <maxy@debian.org>
 Build-Depends: bison,
                cmake (>= 3.0~),
                debhelper (>= 9),
+               doxygen,
                extra-cmake-modules (>= 5.37.0~),
                flex,
+               graphviz,
+               libqt5sql5-sqlite,
                libudev-dev [linux-any],
                pkg-kde-tools (>= 0.15.15ubuntu1~),
                qtbase5-dev (>= 5.7.0~),
                qtdeclarative5-dev (>= 5.7.0~),
                qttools5-dev (>= 5.4),
-               qttools5-dev-tools (>= 5.4)
+               qttools5-dev-tools (>= 5.4),
 Standards-Version: 4.0.0
 Homepage: https://projects.kde.org/projects/frameworks/solid
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/frameworks/solid.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/frameworks/solid.git
-
-Package: libkf5solid-dev
-Section: libdevel
-Architecture: any
-Depends: libkf5solid5 (= ${binary:Version}),
-         qtbase5-dev (>= 5.7.0~),
-         ${misc:Depends}
-Description: Qt library to query and control hardware
- Solid is a device integration framework. It provides a way of querying and
- interacting with hardware independently of the underlying operating system.
- .
- This package is part of KDE Frameworks 5.
- .
- This package contains the development files.
-Breaks: kio-dev (<< 5.28), libkf5kio-dev (<< 5.37)
-
-Package: libkf5solid5
-Architecture: any
-Multi-Arch: same
-Depends: libkf5solid5-data (= ${source:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Recommends: media-player-info [linux-any]
-Description: Qt library to query and control hardware
- Solid is a device integration framework. It provides a way of querying and
- interacting with hardware independently of the underlying operating system.
- .
- Solid is part of KDE Frameworks 5.
-Breaks: baloo-kf5 (<< 5.37),
-        kio (<< 5.37),
-        libkf5baloo5 (<< 5.37),
-        libkf5kdelibs4support5 (<< 5.37),
-        libkf5kiofilewidgets5 (<< 5.37),
-        libkf5runner5 (<< 5.37)
-
-Package: libkf5solid5-data
-Architecture: all
-Multi-Arch: foreign
-Depends: ${misc:Depends}
-Description: Qt library to query and control hardware
- Solid is a device integration framework. It provides a way of querying and
- interacting with hardware independently of the underlying operating system.
- .
- Solid is part of KDE Frameworks 5.
- .
- This package contains shared data files.
 
 Package: libkf5solid-bin
 Architecture: any
@@ -77,16 +34,64 @@ Description: Qt library to query and control hardware
  .
  This package contains the solid-hardware5 tool.
 
-Package: qtdeclarative5-kf5solid
-Section: oldlibs
-Priority: extra
-Architecture: all
-Depends: qml-module-org-kde-solid, ${misc:Depends}, ${shlibs:Depends}
-Description: transitional package to renamed qml-module-org-kde-solid
- Transitional package for qml-module-org-kde-solid.  This package is
- safe to remove.
+Package: libkf5solid-dev
+Section: libdevel
+Architecture: any
+Depends: libkf5solid5 (= ${binary:Version}),
+         qtbase5-dev (>= 5.7.0~),
+         ${misc:Depends},
+Recommends: libkf5solid5-doc (= ${source:Version})
+Description: Qt library to query and control hardware
+ Solid is a device integration framework. It provides a way of querying and
+ interacting with hardware independently of the underlying operating system.
  .
  This package is part of KDE Frameworks 5.
+ .
+ This package contains the development files.
+Breaks: kio-dev (<< 5.28), libkf5kio-dev (<< 5.37)
+
+Package: libkf5solid-doc
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Qt library to query and control hardware (documentation)
+ Solid is a device integration framework. It provides a way of querying and
+ interacting with hardware independently of the underlying operating system.
+ .
+ Solid is part of KDE Frameworks 5.
+ .
+ This package contains the qch documentation files.
+
+Package: libkf5solid5
+Architecture: any
+Multi-Arch: same
+Depends: libkf5solid5-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: media-player-info [linux-any]
+Description: Qt library to query and control hardware
+ Solid is a device integration framework. It provides a way of querying and
+ interacting with hardware independently of the underlying operating system.
+ .
+ Solid is part of KDE Frameworks 5.
+Breaks: baloo-kf5 (<< 5.37),
+        kio (<< 5.37),
+        libkf5baloo5 (<< 5.37),
+        libkf5kdelibs4support5 (<< 5.37),
+        libkf5kiofilewidgets5 (<< 5.37),
+        libkf5runner5 (<< 5.37),
+
+Package: libkf5solid5-data
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: Qt library to query and control hardware
+ Solid is a device integration framework. It provides a way of querying and
+ interacting with hardware independently of the underlying operating system.
+ .
+ Solid is part of KDE Frameworks 5.
+ .
+ This package contains shared data files.
 
 Package: qml-module-org-kde-solid
 Architecture: any
@@ -97,5 +102,16 @@ Breaks: qtdeclarative5-kf5solid (<< 5.0.0-0ubuntu2)
 Description: Qt library to query and control hardware plugin
  Solid is a device integration framework. It provides a way of querying and
  interacting with hardware independently of the underlying operating system.
+ .
+ This package is part of KDE Frameworks 5.
+
+Package: qtdeclarative5-kf5solid
+Section: oldlibs
+Priority: extra
+Architecture: all
+Depends: qml-module-org-kde-solid, ${misc:Depends}, ${shlibs:Depends}
+Description: transitional package to renamed qml-module-org-kde-solid
+ Transitional package for qml-module-org-kde-solid.  This package is
+ safe to remove.
  .
  This package is part of KDE Frameworks 5.
