@@ -107,7 +107,7 @@ Description: Qt library to query and control hardware plugin
 
 Package: qtdeclarative5-kf5solid
 Section: oldlibs
-Priority: extra
+Priority: optional
 Architecture: all
 Depends: qml-module-org-kde-solid, ${misc:Depends}, ${shlibs:Depends}
 Description: transitional package to renamed qml-module-org-kde-solid
