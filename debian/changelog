@@ -309,17 +309,6 @@ solid (5.18.0-1) experimental; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Wed, 27 Jan 2016 13:33:41 +0100
 
-solid (5.18.0-0ubuntu1) UNRELEASED; urgency=medium
-
-  [ Scarlett Clark ]
-  * Debian merge. No remaining changes. 
-  * New upstream release Xenial
-
-  [ Philip Muškovac ]
-  * New upstream release
-
- -- Philip Muškovac <yofel@kubuntu.org>  Wed, 06 Jan 2016 15:12:54 +0100
-
 solid (5.16.0-1) unstable; urgency=medium
 
   * New upstream release (5.16.0).
