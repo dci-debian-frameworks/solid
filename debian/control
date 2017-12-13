@@ -40,7 +40,7 @@ Architecture: any
 Depends: libkf5solid5 (= ${binary:Version}),
          qtbase5-dev (>= 5.7.0~),
          ${misc:Depends},
-Recommends: libkf5solid5-doc (= ${source:Version})
+Recommends: libkf5solid-doc (= ${source:Version})
 Description: Qt library to query and control hardware
  Solid is a device integration framework. It provides a way of querying and
  interacting with hardware independently of the underlying operating system.
