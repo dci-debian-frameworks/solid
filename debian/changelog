@@ -1,8 +1,12 @@
-solid (5.41.0-1~) UNRELEASED; urgency=medium
+solid (5.41.0-1) experimental; urgency=medium
 
   * New upstream release (5.41.0).
+  * Bump Standards-Version to 4.1.2.
+  * Update build-deps and deps with the info from cmake
+  * Bump group breaks (5.41)
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Wed, 13 Dec 2017 09:33:58 -0300
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 15 Dec 2017 10:43:26 -0300
 
 solid (5.41.0-0neon) xenial; urgency=medium
 
