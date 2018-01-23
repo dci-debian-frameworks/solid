@@ -1,0 +1,58 @@
+diff --git a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
+--- a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
++++ b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
+@@ -24,6 +24,7 @@
+ 
+ #include <QDomDocument>
+ #include <QDBusConnection>
++#include <QDir>
+ #include <QApplication>
+ #include <QWidget>
+ 
+@@ -104,7 +105,15 @@
+ 
+ bool StorageAccess::isIgnored() const
+ {
+-    return m_device->prop("HintIgnore").toBool();
++    if (m_device->prop("HintIgnore").toBool()) {
++        return true;
++    }
++
++    const QString path = filePath();
++
++    return !path.startsWith(QLatin1String("/media/"))
++               && !path.startsWith(QLatin1String("/run/media/"))
++               && !path.startsWith(QDir::homePath());
+ }
+ 
+ bool StorageAccess::setup()
+diff --git a/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp b/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp
+--- a/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp
++++ b/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp
+@@ -22,6 +22,8 @@
+ #include "udisksstoragevolume.h"
+ #include "udisks2.h"
+ 
++#include <QDir>
++
+ using namespace Solid::Backends::UDisks2;
+ 
+ StorageVolume::StorageVolume(Device *device)
+@@ -92,6 +94,15 @@
+ bool StorageVolume::isIgnored() const
+ {
+     const Solid::StorageVolume::UsageType usg = usage();
+-    return m_device->prop("HintIgnore").toBool() || m_device->isSwap() ||
+-           ((usg == Solid::StorageVolume::Unused || usg == Solid::StorageVolume::Other || usg == Solid::StorageVolume::PartitionTable) && !m_device->isOpticalDisc());
++    if (m_device->prop("HintIgnore").toBool()) {
++        return true;
++    }
++
++    if (m_device->isSwap() ||
++            ((usg == Solid::StorageVolume::Unused || usg == Solid::StorageVolume::Other || usg == Solid::StorageVolume::PartitionTable) && !m_device->isOpticalDisc())) {
++        return true;
++    }
++
++    const QString backingFile = m_device->prop("BackingFile").toString();
++    return backingFile.isEmpty() || !backingFile.startsWith(QDir::homePath());
+ }
