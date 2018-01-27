@@ -1,0 +1,85 @@
+From 3e9c2791fd3f3ce66b81386510270cb3ab4c0dcb Mon Sep 17 00:00:00 2001
+From: Kai Uwe Broulik <kde@privat.broulik.de>
+Date: Tue, 23 Jan 2018 17:04:51 +0100
+Subject: [PATCH 1/3] [UDisks Device] Show loop device with their backing file
+ name and icon
+
+Instead of showing generic "Loop Device" for everything, use the backing file's file name and mime type icon.
+
+Differential Revision: https://phabricator.kde.org/D9894
+---
+ .../devices/backends/udisks2/udisksdevice.cpp      | 24 ++++++++++++++++++++--
+ src/solid/devices/backends/udisks2/udisksdevice.h  |  1 +
+ 2 files changed, 23 insertions(+), 2 deletions(-)
+
+diff --git a/src/solid/devices/backends/udisks2/udisksdevice.cpp b/src/solid/devices/backends/udisks2/udisksdevice.cpp
+index a456ddd..bbdd904 100644
+--- a/src/solid/devices/backends/udisks2/udisksdevice.cpp
++++ b/src/solid/devices/backends/udisks2/udisksdevice.cpp
+@@ -34,6 +34,7 @@
+ #include <solid/device.h>
+ 
+ #include <QtCore/QDebug>
++#include <QtCore/QMimeDatabase>
+ 
+ #include <QtDBus/QDBusMessage>
+ #include <QtDBus/QDBusMetaType>
+@@ -245,7 +246,7 @@ QString Device::description() const
+     }
+ 
+     if (isLoop()) {
+-        return tr("Loop Device");
++        return loopDescription();
+     } else if (isSwap()) {
+         return tr("Swap Space");
+     } else if (queryDeviceInterface(Solid::DeviceInterface::StorageDrive)) {
+@@ -257,6 +258,16 @@ QString Device::description() const
+     }
+ }
+ 
++QString Device::loopDescription() const
++{
++    const QString backingFile = prop("BackingFile").toString();
++    if (!backingFile.isEmpty()) {
++        return backingFile.section(QLatin1Char('/'), -1);
++    }
++
++    return tr("Loop Device");
++}
++
+ QString Device::storageDescription() const
+ {
+     QString description;
+@@ -592,7 +603,16 @@ QString Device::icon() const
+ 
+     if (!iconName.isEmpty()) {
+         return iconName;
+-    } else if (isLoop() || isSwap()) {
++    } else if (isLoop()) {
++        const QString backingFile = prop("BackingFile").toString();
++        if (!backingFile.isEmpty()) {
++            QMimeType type = QMimeDatabase().mimeTypeForFile(backingFile);
++            if (!type.isDefault()) {
++                return type.iconName();
++            }
++        }
++        return QStringLiteral("drive-harddisk");
++    } else if (isSwap()) {
+         return "drive-harddisk";
+     } else if (isDrive()) {
+         const bool isRemovable = prop("Removable").toBool();
+diff --git a/src/solid/devices/backends/udisks2/udisksdevice.h b/src/solid/devices/backends/udisks2/udisksdevice.h
+index ecab63d..147d554 100644
+--- a/src/solid/devices/backends/udisks2/udisksdevice.h
++++ b/src/solid/devices/backends/udisks2/udisksdevice.h
+@@ -93,6 +93,7 @@ protected:
+     QPointer<DeviceBackend> m_backend;
+ 
+ private:
++    QString loopDescription() const;
+     QString storageDescription() const;
+     QString volumeDescription() const;
+ };
+-- 
+2.7.4
+

@@ -1,0 +1,85 @@
+From 1384f275ab2f1ad1841753ee163af6d1b0bb952b Mon Sep 17 00:00:00 2001
+From: Kai Uwe Broulik <kde@privat.broulik.de>
+Date: Tue, 23 Jan 2018 17:06:06 +0100
+Subject: [PATCH 2/3] [UDisks] Ignore non-user mounts
+
+This gets rid of all those internal mounts, such as /snap mounts.
+The approach is similar to GVFS which ignores everything outside /media, /home/user, and /media/run,
+cf. https://github.com/GNOME/gvfs/blob/master/monitor/udisks2/what-is-shown.txt
+Explicitly creating a mount in /etc/fstab outside of those directories is still possible and will always show up.
+
+BUG: 379516
+CCBUG: 319998
+
+CHANGELOG: Storage devices mounted outside of /media, /run/media, and $HOME are now ignored, as well as Loop Devices whose
+backing file is outside of $HOME
+
+Differential Revision: https://phabricator.kde.org/D9895
+---
+ .../devices/backends/udisks2/udisksstorageaccess.cpp      | 11 ++++++++++-
+ .../devices/backends/udisks2/udisksstoragevolume.cpp      | 15 +++++++++++++--
+ 2 files changed, 23 insertions(+), 3 deletions(-)
+
+diff --git a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
+index ad84999..5630e80 100644
+--- a/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
++++ b/src/solid/devices/backends/udisks2/udisksstorageaccess.cpp
+@@ -24,6 +24,7 @@
+ 
+ #include <QDomDocument>
+ #include <QDBusConnection>
++#include <QDir>
+ #include <QApplication>
+ #include <QWidget>
+ 
+@@ -104,7 +105,15 @@ QString StorageAccess::filePath() const
+ 
+ bool StorageAccess::isIgnored() const
+ {
+-    return m_device->prop("HintIgnore").toBool();
++    if (m_device->prop("HintIgnore").toBool()) {
++        return true;
++    }
++
++    const QString path = filePath();
++
++    return !path.startsWith(QLatin1String("/media/"))
++               && !path.startsWith(QLatin1String("/run/media/"))
++               && !path.startsWith(QDir::homePath());
+ }
+ 
+ bool StorageAccess::setup()
+diff --git a/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp b/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp
+index d3b97c3..d74eaad 100644
+--- a/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp
++++ b/src/solid/devices/backends/udisks2/udisksstoragevolume.cpp
+@@ -22,6 +22,8 @@
+ #include "udisksstoragevolume.h"
+ #include "udisks2.h"
+ 
++#include <QDir>
++
+ using namespace Solid::Backends::UDisks2;
+ 
+ StorageVolume::StorageVolume(Device *device)
+@@ -92,6 +94,15 @@ Solid::StorageVolume::UsageType StorageVolume::usage() const
+ bool StorageVolume::isIgnored() const
+ {
+     const Solid::StorageVolume::UsageType usg = usage();
+-    return m_device->prop("HintIgnore").toBool() || m_device->isSwap() ||
+-           ((usg == Solid::StorageVolume::Unused || usg == Solid::StorageVolume::Other || usg == Solid::StorageVolume::PartitionTable) && !m_device->isOpticalDisc());
++    if (m_device->prop("HintIgnore").toBool()) {
++        return true;
++    }
++
++    if (m_device->isSwap() ||
++            ((usg == Solid::StorageVolume::Unused || usg == Solid::StorageVolume::Other || usg == Solid::StorageVolume::PartitionTable) && !m_device->isOpticalDisc())) {
++        return true;
++    }
++
++    const QString backingFile = m_device->prop("BackingFile").toString();
++    return backingFile.isEmpty() || !backingFile.startsWith(QDir::homePath());
+ }
+-- 
+2.7.4
+
