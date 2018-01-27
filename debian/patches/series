@@ -1,3 +1,6 @@
 use_shortest_filepath.diff
 fix-FTBFS-on-mipsel-and-m68k-src-solid-predicate_parser.c.patch
-D9895.patch
+
+0001-UDisks-Device-Show-loop-device-with-their-backing-fi.patch
+0002-UDisks-Ignore-non-user-mounts.patch
+0003-UDisks-Only-ignore-non-user-backing-file-if-it-is-kn.patch
